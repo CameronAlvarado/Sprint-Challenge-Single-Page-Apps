@@ -18,7 +18,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>Ooooooh Weeeee! Just look at all these zany characters!</h2>
       <Container text>
             <Grid relaxed columns={2} divided="vertically">
                 <Grid.Row padded="vertically" columns={2}>
