@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Grid, Image } from "semantic-ui-react"
 
-export default function CharacterCard(props) {
+export default function EpisodeCard(props) {
   return(
     <Grid.Column>
-        <Card className='cards'>
+        <Card>
         <Image src={props.image} wrapped ui={false} />
             <Card.Content>
                 <Card.Header>
@@ -14,14 +14,11 @@ export default function CharacterCard(props) {
                   id: {props.id}
                 </Card.Meta>
                 <Card.Description>
-                  Species: {props.species}
+                  Created: {props.created}
                   </Card.Description>
                   <Card.Description>
-                  Gender: {props.gender}
+                  Air Date: {props.air}
                   </Card.Description>
-                  <Card.Description>
-                  Status: {props.status}
-                </Card.Description>
                 <Card.Description>
                   More Details: <a href={props.url}>Click Here</a>
                 </Card.Description>
