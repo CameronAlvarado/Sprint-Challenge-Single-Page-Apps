@@ -23,7 +23,7 @@ export default function CharacterCard(props) {
                   Status: {props.status}
                 </Card.Description>
                 <Card.Description>
-                  More Details: <a href={props.url}>{props.url}</a>
+                  More Details: <a href={props.url}>Click Here</a>
                 </Card.Description>
             </Card.Content>
         </Card>

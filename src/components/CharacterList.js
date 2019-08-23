@@ -34,7 +34,7 @@ export default function CharacterList() {
                             gender={character.gender}
                             id={character.id}
                             status={character.status}
-                            link={character.url}
+                            url={character.url}
                         />
                         );
                     })}

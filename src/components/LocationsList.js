@@ -1,12 +1,12 @@
 import React, { useEffect, useState }  from "react";
 import axios from "axios";
 import LocationCard from './LocationCard'
-import { Container, Grid, List } from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
 
 export default function LocationsList() {
   // TODO: Add useState to track data from useEffect
   const [locationData, setLocationData] = useState([]);
-  const [residentData, setResidentData] = useState([]);
+//   const [residentData, setResidentData] = useState([]);
 
   useEffect(() => {
     axios
@@ -17,14 +17,14 @@ export default function LocationsList() {
       })
   }, []);
 
-  useEffect(() => {
-    axios
-    .get(`https://rickandmortyapi.com/api/character/401`)
-    .then(response => {
-        // setResidentData(response.data.results);
-        console.log(response);
-      })
-  }, []);
+//   useEffect(() => {
+//     axios
+//     .get(`https://rickandmortyapi.com/api/character/401`)
+//     .then(response => {
+//         // setResidentData(response.data.results);
+//         console.log(response);
+//       })
+//   }, []);
 
   return (
     <section className="location-list grid-view">
@@ -43,6 +43,14 @@ export default function LocationsList() {
                             type={location.type}
                             residents={location.residents.map(residents => {
                                 console.log(residents);
+                                // return (
+                                //     axios
+                                //     .get(residents)
+                                //     .then(response => {
+                                //         // setLocationData(response.data.results);
+                                //         console.log(response.data.results);
+                                //       })
+                                // )
                                 
                             })}
                         />
